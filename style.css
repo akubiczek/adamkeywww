@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.naglowek-glowny {
+    background-color: #080808;
+    color: white;
+    padding: 8px 0; 
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.kontener {
+    width: 10%;
+    margin: 0 auto;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+}
+
+.przycisk {
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+
+.zdjecie-kontener {
+    width: 95%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.zdjecie-kontener .zdjecie {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+}
+
+.napis{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 8px 12px;
+    font-size: 30px;
+    font-weight: bold;
+}
