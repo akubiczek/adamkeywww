@@ -1,4 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+@import url("https://use.typekit.net/sha0cgf.css");
+
+/* LIGHT THEME STYLES */
+body.light-theme {
+    background: #fff;
+    color: #999999;
+}
+
+body.light-theme h1 {
+    color: #111111;
+}
+
+/* DARK THEME STYLES */
+body.dark-theme {
+    background: #333333;
+    color: #999999;
+}
+
+body.dark-theme h1 {
+    color: #cccccc;
+}
+
+body.dark-theme figcaption {
+    color: #cccccc;
+}
+
+body.dark-theme a:link {
+    color: #999999;
+}
+
+body.dark-theme a:hover {
+    color: #ccc;
+}
+
+body.dark-theme a.active {
+    color: #ccc;
+}
+
+/* GENERAL STYLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html {
     font-size: 16px;
@@ -6,63 +50,111 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: #3e3e3e;
-    font-family: "Bebas Neue", "Helvetica Neue", sans-serif;
-    color: #eee;
+    padding: 0 10px;
+    font-family: "proxima-nova", sans-serif;
 }
 
-.naglowek-glowny {
-    background-color: #2f2e2e;
-    padding: 12px; 
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-}
-
-.kontener {
-    width: 10%;
+header {
     margin: 0 auto;
+    max-width: 1570px;
+    padding: 0 30px;
+    padding-top: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
 }
 
-.przycisk {
-    color: white;
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header a {
+    color: #aaaaaa;
     text-decoration: none;
-    font-size: 2em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-.zdjecie-kontener {
-    width: calc(100% - 80px);
-    margin: 20px 40px;
-    position: relative;
+header .logo {
+    font-size: 1.6rem;
+    flex: 1;
 }
 
-.zdjecie-kontener .zdjecie {
+main {
+    margin: 0 auto;
+    max-width: 1570px;
+}
+
+section.intro {
+    margin: 0 auto;
+    max-width: 810px;
+    padding-top: 130px;
+    padding-bottom: 45px;
+}
+
+h1 {
+    font-family: "Neuton", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-top: 1.5rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+}
+
+figure {
+    margin-bottom: 10px;
+}
+
+img {
     width: 100%;
-    max-width: 2600px;
-    margin: auto;
     display: block;
-    box-sizing: border-box;
-    height: auto;
-    border: 8px solid #eee;
 }
 
-.napis{
-    position: absolute;
-    bottom: 0;
-    right: 1.4rem;
-    margin: none;
-    padding: none;
-    font-size: min(2vw, 1.4rem);
-    line-height: 1.4rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+img.portrait {
+    margin: 0 auto;
+    width: auto;
+    height: 100vh;
+    display: block;
+}
+
+figcaption {
+    padding:2px 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.photo-row {
+    display: flex;
+    align-items: flex-start;   /* ważne: nie rozciągamy elementów na wysokość wiersza */
+    gap: 10px;                  /* odstęp między obrazkami */
+    margin-bottom: 10px;
+}
+
+/* wyłączamy wszystkie dotychczasowe width/height nadpisania: */
+.photo-row img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* 1) szerokokątne 3:2 -> udział 9/13 dostępnej szerokości */
+.photo-row .landscape {
+    width: calc((100% - 10px) * 9 / 13);
+    aspect-ratio: 3 / 2;
+}
+
+/* 2) pionowe 2:3 -> udział 4/13 dostępnej szerokości */
+.photo-row .portrait {
+    width: calc((100% - 10px) * 4 / 13);
+    aspect-ratio: 2 / 3;
 }
