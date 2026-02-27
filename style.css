@@ -83,6 +83,11 @@ header .logo {
     flex: 1;
 }
 
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
 main {
     margin: 0 auto;
     max-width: 1570px;
@@ -117,13 +122,18 @@ figure {
 img {
     width: 100%;
     display: block;
+    cursor: pointer;
 }
 
-img.portrait {
-    margin: 0 auto;
-    width: auto;
+img.fullscreen, .diptych img.fullscreen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
     height: 100vh;
-    display: block;
+    object-fit: contain;
+    background: #333333;
+    z-index: 999;
+    cursor: pointer;
 }
 
 figcaption {
@@ -133,28 +143,30 @@ figcaption {
     text-align: right;
 }
 
-.photo-row {
+.diptych {
     display: flex;
-    align-items: flex-start;   /* ważne: nie rozciągamy elementów na wysokość wiersza */
-    gap: 10px;                  /* odstęp między obrazkami */
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-/* wyłączamy wszystkie dotychczasowe width/height nadpisania: */
-.photo-row img {
+.diptych img {
     width: auto;
     height: auto;
     display: block;
 }
 
-/* 1) szerokokątne 3:2 -> udział 9/13 dostępnej szerokości */
-.photo-row .landscape {
+.diptych .landscape50 {
+    width: calc((100% - 10px) * 0.5);
+    aspect-ratio: 3 / 2;
+}
+
+.diptych .landscape66 {
     width: calc((100% - 10px) * 9 / 13);
     aspect-ratio: 3 / 2;
 }
 
-/* 2) pionowe 2:3 -> udział 4/13 dostępnej szerokości */
-.photo-row .portrait {
+.diptych .portrait33 {
     width: calc((100% - 10px) * 4 / 13);
     aspect-ratio: 2 / 3;
 }
