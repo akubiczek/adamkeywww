@@ -8,6 +8,18 @@ body.light-theme h1 {
     color: #111111;
 }
 
+body.light-theme a:link {
+    color: #999999;
+}
+
+body.light-theme a:hover {
+    color: #333;
+}
+
+body.light-theme a.active {
+    color: #333;
+}
+
 /* DARK THEME STYLES */
 body.dark-theme {
     background: #333333;
@@ -15,10 +27,6 @@ body.dark-theme {
 }
 
 body.dark-theme h1 {
-    color: #cccccc;
-}
-
-body.dark-theme figcaption {
     color: #cccccc;
 }
 
