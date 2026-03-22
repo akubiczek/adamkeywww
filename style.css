@@ -43,7 +43,9 @@ body.dark-theme a.active {
 }
 
 /* GENERAL STYLES */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -88,6 +90,7 @@ header .logo {
 }
 
 footer {
+    font-size: 1.2rem;
     padding: 20px 0;
     text-align: center;
 }
@@ -118,6 +121,11 @@ p {
     line-height: 1.75rem;
 }
 
+aside {
+    padding: 80vh 0 2rem 0;
+    text-align: center;
+}
+
 figure {
     margin-bottom: 10px;
 }
@@ -128,7 +136,8 @@ img {
     cursor: pointer;
 }
 
-img.fullscreen, .diptych img.fullscreen {
+img.fullscreen,
+.diptych img.fullscreen {
     position: fixed;
     inset: 0;
     width: 100vw;
@@ -140,7 +149,7 @@ img.fullscreen, .diptych img.fullscreen {
 }
 
 figcaption {
-    padding:2px 0;
+    padding: 2px 0;
     font-size: 0.8rem;
     font-weight: 400;
     text-align: right;
